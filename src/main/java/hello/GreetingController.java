@@ -13,7 +13,7 @@ public class GreetingController {
 
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
-        System.out.println("Hello1");
+        System.out.println("Hello12");
         return new Greeting(counter.incrementAndGet(),
                            String.format(template, name));
     }
