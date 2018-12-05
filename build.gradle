@@ -4,7 +4,7 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
-//    classpath "org.sonarsource.scanner.gradle: sonarqube-gradle-plugin:2.5"
+    classpath "org.sonarsource.scanner.gradle: sonarqube-gradle-plugin:2.6"
     }
 }
 
@@ -13,9 +13,6 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
-plugins {
-  id "org.sonarqube" version "2.6"
-}
 
 bootJar {
     baseName = 'gs-rest-service'
@@ -33,3 +30,6 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('com.jayway.jsonpath:json-path')
+}
+
+
